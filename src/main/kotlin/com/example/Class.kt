@@ -9,6 +9,6 @@ fun main(args: Array<String>) {
     println("${patient.firstName}'s age is ${patient.age}")
 }
 
-class Patient(val firstName: String, val lastName: String, val birthday: LocalDate) {
+data class Patient(val firstName: String, val lastName: String, val birthday: LocalDate) {
     val age get() = ChronoUnit.YEARS.between(birthday, LocalDate.now())
 }
